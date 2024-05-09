@@ -1,0 +1,22 @@
+*landing a ecummerce application for resume like DigiKala styling are absolutely hard enough 
+so first i will try styling effects with tailwindcss and css, and then i will fill my database
+with images and other informtions and sending http request for it.
+
+*MUST_BE_USED : 
+1_lazy loading
+2_Redux
+3_scrolling effects
+4_Cotext api and Reducer
+5_
+
+*STEPS :
+1_styling =>
+2_filling database =>
+3_cathing data and PLP (Product List Page) => with infinite scrolling effect, lazy loading
+4_creating PDP (Product Detail page) =>
+5_creating CP (Cart Page) => user can add and remove products from it with buttons, total price will be shown
+6_creating CM (Cart Modal) => realy hard
+
+*UnFinished : 
+1_cssClasses that listen to screen width change in products
+2_

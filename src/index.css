@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-glass {
+  background-color: rgba(0, 0, 0, 0.377);
+  backdrop-filter: blur(20px)
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.btn-slate-dark {
+  @apply bg-slate-800 cursor-pointer text-white px-2 py-1 rounded-sm hover:bg-slate-900 flex items-center justify-center;
+}
+
+.btn-slate-light {
+  @apply bg-slate-400 cursor-pointer text-white px-2 py-1 rounded-sm hover:bg-slate-500 flex items-center justify-center;
+}
+
+.btn-red-light {
+  @apply bg-rose-600 cursor-pointer text-white px-2 py-1 rounded-sm hover:bg-rose-800 flex items-center justify-center;
+}
+
+.btn-red-light {
+  @apply bg-rose-600 cursor-pointer text-white px-2 py-1 rounded-sm hover:bg-rose-800 flex items-center justify-center;
+}
+
+.btn-slate-asd{
+  @apply bg-rose-900 cursor-pointer text-white px-2 py-1 rounded-sm hover:bg-rose-950 flex items-center justify-center;
+}
+
+.grid-products-system {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-dialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px; */
+}
+
+#Modal {
+  
+  /* width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(73, 73, 73, 0.349);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; */
+
+  /* width: 30%;
+  background: #d3b17b;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: fade-slide-in-from-top 0.3s ease-in-out; */
+}
+
+/* sppiner loading */
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid currentColor;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentColor transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
