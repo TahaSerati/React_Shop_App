@@ -19,4 +19,3 @@ with images and other informtions and sending http request for it.
 
 *UnFinished : 
 1_cssClasses that listen to screen width change in products
-2_

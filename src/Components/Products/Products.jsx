@@ -1,10 +1,11 @@
 // imports
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { GetAndStore } from '../../utils/localStore';
+// import { products } from "../db";
 // comps
 import Header from "../pages/Header";
 import Product from "./Product";
-import { products } from "../db";
+import { GetAndStore } from "../../utils/localStore";
 
 export default function Products() {
      // fetch data
@@ -12,16 +13,17 @@ export default function Products() {
           ? 'grid-products-system' : 'flex flex-col gap-3 items-center');
      const [fetchedProducts, setFetchedProducts] = useState();
 
-     if (!fetchedProducts)
-          setFetchedProducts(products);
 
-     // useEffect(() => {
-     //      async function httpGetandSave() {
-     //           const data = await GetAndStore();
-     //           setFetchedProducts(data);     
-     //      }
-     //      httpGetandSave();
-     // }, [])
+     useEffect(() => {
+          async function httpGetandSave() {
+               const data = await GetAndStore();
+               setFetchedProducts(data);
+          }
+          httpGetandSave();
+     }, [])
+
+     // if (!fetchedProducts)
+     //      setFetchedProducts(products);
 
      window.addEventListener("resize", function () {
           if (window.screen.width > 1023) {

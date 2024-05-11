@@ -1,30 +1,36 @@
 import { useParams } from "react-router-dom";
-// import { getProductWithId } from "../../utils/http";
 import Header from "../pages/Header";
-import { products } from "../db";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../Context/cartContext";
+import { getProductWithId } from "../../utils/http";
+// import { getProductWithId } from "../../utils/http";
+// import { products } from "../db";
+
+
 export default function ProductDetail() {
      const [product, setProduct] = useState();
      const params = useParams();
      const id = params.id;
      const cartCtx = useContext(CartContext);
-     console.log(product, id, products)
-     if (!product) {
-          const product = products.find((product) => product.id == id)
-          setProduct(product);
-     }
+
      function onAddToCart(event) {
           event.stopPropagation();
           cartCtx.addProduct(product.id);
      }
-     // useEffect(() => {
-     //      async function fetchOneProduct() {
-     //           const data = await getProductWithId(id);
-     //           setProduct(data);
-     //      }
-     //      fetchOneProduct();
-     // }, [id])
+     
+     useEffect(() => {
+          async function fetchOneProduct() {
+               const data = await getProductWithId(id);
+               setProduct(data);
+          }
+          fetchOneProduct();
+     }, [id])
+     
+     // console.log(product, id, products)
+     // if (!product) {
+     //      const product = products.find((product) => product.id == id)
+     //      setProduct(product);
+     // }
 
      return (
           <>

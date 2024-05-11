@@ -1,5 +1,5 @@
-import { products } from "../Components/db";
-// import { getProducts } from "./http";
+import { getProducts } from "./http";
+// import { products } from "../Components/db";
 
 export function GetAndStore() {
      const allProducts = JSON.parse(localStorage.getItem('allProducts'));
@@ -11,8 +11,8 @@ export function GetAndStore() {
 }
 
 async function fetchAndSave() {
-     // const allProducts = await getProducts();
-     const allProducts = products;
+     const allProducts = await getProducts();
+     // const allProducts = products;
      localStorage.setItem('allProducts', JSON.stringify(allProducts));
      return allProducts;
 }    
